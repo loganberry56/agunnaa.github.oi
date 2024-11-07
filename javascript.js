@@ -1,6 +1,7 @@
 // Reference menu button and navigation menu
 const menuButton = document.getElementById('menu-button');
 const navMenu = document.getElementById('nav-menu');
+const footer = document.getElementById('footer');
 
 // Toggle menu visibility with sliding effect
 menuButton.addEventListener('click', () => {
@@ -20,6 +21,13 @@ function navigateTo(pageId) {
   // Hide the navigation menu with slide effect
   navMenu.classList.add('hidden');
   navMenu.classList.remove('menu-slide');
+
+  // Show footer only on the landing page
+  if (pageId === 'landing-page') {
+    footer.style.display = 'flex'; // Show footer
+  } else {
+    footer.style.display = 'none'; // Hide footer on other pages
+  }
 }
 
 // Intersection Observer for fading sections in and out
@@ -58,3 +66,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+  
