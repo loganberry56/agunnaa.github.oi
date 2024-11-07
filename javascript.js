@@ -1,7 +1,8 @@
-// Reference menu button and navigation menu
+// Reference menu button, navigation menu, swap button, and footer
 const menuButton = document.getElementById('menu-button');
 const navMenu = document.getElementById('nav-menu');
 const footer = document.getElementById('footer');
+const swapButton = document.getElementById('swap-button'); // Reference the Swap button
 
 // Toggle menu visibility with sliding effect
 menuButton.addEventListener('click', () => {
@@ -29,6 +30,27 @@ function navigateTo(pageId) {
     footer.style.display = 'none'; // Hide footer on other pages
   }
 }
+
+// Function to check if the footer is in view and toggle Swap button visibility
+function toggleSwapButtonVisibility() {
+  const footerRect = footer.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
+
+  // Check if the footer is in view
+  if (footerRect.top <= viewportHeight) {
+    swapButton.classList.add('hidden'); // Hide Swap button when footer is visible
+  } else {
+    swapButton.classList.remove('hidden'); // Show Swap button when footer is out of view
+  }
+}
+
+// Redirect to the swap page when the Swap button is clicked
+swapButton.addEventListener('click', () => {
+  navigateTo('swap'); // Call navigateTo with the 'swap' pageId to display the swap page
+});
+
+// Listen for scroll events to toggle Swap button visibility
+window.addEventListener('scroll', toggleSwapButtonVisibility);
 
 // Intersection Observer for fading sections in and out
 const sections = document.querySelectorAll('.content-section');
@@ -66,4 +88,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-  
