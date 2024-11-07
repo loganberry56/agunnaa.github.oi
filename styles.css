@@ -225,10 +225,6 @@ footer {
   margin: 0 8px;
 }
 
-.social-icon:hover {
-  filter: invert(0.8);
-}
-
 /* Smaller Footer for Laptops and Tablets */
 @media (max-width: 1024px) {
   footer {
