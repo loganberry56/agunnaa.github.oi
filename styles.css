@@ -290,3 +290,26 @@ footer {
     height: 14px;
   }
 }
+
+/* Styling for Intro Text on Landing Page */
+.intro-text {
+  font-size: 24px; /* Increase this size as needed */
+  font-weight: 500; /* Optional: make text slightly bold */
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #fff; /* Adjust color as needed */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 20px; /* Smaller size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text {
+    font-size: 18px; /* Smaller size for mobile devices */
+  }
+}
