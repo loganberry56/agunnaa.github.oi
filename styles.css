@@ -309,3 +309,27 @@ footer {
     font-size: 18px; /* Smaller size for mobile devices */
   }
 }
+
+/* Styling for the Swap Button */
+#swap-button {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0D47A1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 5; /* Ensure it appears above other content */
+  transition: opacity 0.3s ease;
+}
+
+/* Hidden state for when the button should disappear */
+#swap-button.hidden {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction when hidden */
+}
