@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TON Blockchain DEX</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header with Logo on the Left and Menu Button on the Right -->
+  <header>
+    <div id="logo-container">
+      <img src="images/9.png" alt="Timeswap Logo" id="logo">
+      <span id="logo-text"></span>
+    </div>
+    <div id="menu-button">Menu</div>
+  </header>
+
+  <!-- Sliding Navigation Menu -->
+  <div id="nav-menu" class="hidden">
+    <nav>
+      <ul>
+        <li><a href="#landing-page" onclick="navigateTo('landing-page')">Landing Page</a></li>
+        <li><a href="#swap" onclick="navigateTo('swap')">Swap</a></li>
+        <li><a href="#stake" onclick="navigateTo('stake')">Stake</a></li>
+        <li><a href="#pools" onclick="navigateTo('pools')">Pools</a></li>
+        <li><a href="#portfolio" onclick="navigateTo('portfolio')">Portfolio</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Landing Page with Additional Sections -->
+  <div id="landing-page" class="page">
+    <h1>Welcome to Timeswap Finance</h1>
+    <p>Your decentralized exchange on the TON blockchain</p>
+
+    <!-- About Timeswap Finance Section -->
+    <section class="content-section fade-in" id="about">
+      <h2>About Timeswap Finance</h2>
+      <ul>
+        <li>A decentralized finance platform on the TON blockchain.</li>
+        <li>Offers secure, fast, and transparent financial services.</li>
+        <li>Empowers users with tools for swapping, staking, and pooling.</li>
+        <li>Provides a user-friendly interface for managing blockchain assets.</li>
+        <li>Focused on accessibility and security for all users.</li>
+      </ul>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="content-section fade-in" id="roadmap">
+      <h2>Roadmap</h2>
+      <ul>
+        <li>Phase 1: Platform development and initial beta release.</li>
+        <li>Phase 2: Integration of advanced staking and pooling features.</li>
+        <li>Phase 3: Launch of mobile app for Android and iOS.</li>
+        <li>Phase 4: Global partnerships to enhance liquidity and user base.</li>
+        <li>Phase 5: Community-driven governance and future expansions.</li>
+      </ul>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="content-section fade-in" id="benefits">
+      <h2>Benefits</h2>
+      <ul>
+        <li>Fast transactions on the TON blockchain.</li>
+        <li>Lower transaction fees compared to traditional platforms.</li>
+        <li>High liquidity for smoother trading experiences.</li>
+        <li>Secure smart contract architecture.</li>
+        <li>24/7 access to decentralized financial services.</li>
+      </ul>
+    </section>
+
+    <!-- Unique Features Section -->
+    <section class="content-section fade-in" id="features">
+      <h2>Unique Features</h2>
+      <ul>
+        <li>Non-custodial platform – users control their funds.</li>
+        <li>Advanced staking options for maximizing returns.</li>
+        <li>Support for cross-chain asset transfers.</li>
+        <li>Intuitive portfolio tracking and management tools.</li>
+        <li>Responsive design for seamless access on any device.</li>
+      </ul>
+    </section>
+  </div>
+
+    <!-- Footer with Logo, Navigation Buttons, and Social Media Icons -->
+    <footer id="footer">
+      <div class="footer-logo-container">
+        <img src="images/9.png" alt="Timeswap Logo" class="footer-logo">
+        <span class="footer-logo-text">Timeswap Finance</span>
+      </div>
+      <div class="footer-navigation">
+        <a href="#about">About Timeswap Finance</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#features">Unique Features</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://twitter.com/youraccount" target="_blank">
+          <img src="images/6.png" alt="Twitter" class="social-icon">
+        </a>
+        <a href="https://telegram.me/youraccount" target="_blank">
+          <img src="images/7.png" alt="Telegram" class="social-icon">
+        </a>
+        <a href="https://discord.com/invite/youraccount" target="_blank">
+          <img src="images/8.png" alt="Discord" class="social-icon">
+        </a>
+      </div>
+    </footer>
+  
+  <!-- Other Sections -->
+  <div id="swap" class="page hidden"><h2>Swap</h2></div>
+  <div id="stake" class="page hidden"><h2>Stake</h2></div>
+  <div id="pools" class="page hidden"><h2>Pools</h2></div>
+  <div id="portfolio" class="page hidden"><h2>Portfolio</h2></div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>

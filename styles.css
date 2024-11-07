@@ -1,0 +1,292 @@
+/* General Page Styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #FF6B6B, #FFD93D, #6A0572, #00E676, #29B6F6, #FFC107, #673AB7, #F44336, #9C27B0, #3F51B5);
+  background-size: 200% 200%;
+  animation: colorWave 10s infinite ease-in-out;
+}
+
+/* Background Color Animation */
+@keyframes colorWave {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header Layout with Logo on Left and Menu Button on Right */
+header {
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 3; /* Ensure header stays on top of other content */
+  box-sizing: border-box;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+#logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+#menu-button {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sliding Menu Styling */
+#nav-menu {
+  position: fixed;
+  top: 50px;/* Directly below the menu button */
+  right: 10px;
+  width: 200px;
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 8px;
+  transition: max-height 0.3s ease;
+  z-index: 2;/* Ensures it appears below the menu button */
+}
+
+#nav-menu.menu-slide {
+  max-height: 300px; /* Set high enough to reveal all links */
+}
+
+#nav-menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-menu nav ul li {
+  margin: 15px 0;
+}
+
+#nav-menu nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Hidden Class to Hide Pages */
+.page.hidden {
+  display: none;
+}
+
+/* Content Sections in Landing Page */
+.content-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #333, #29B6F6); /* Blue to Black gradient */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease;
+}
+
+.content-section.fade-in {
+  opacity: 1; /* Fade in when in view */
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  #logo-text {
+    font-size: 18px;
+  }
+  #menu-button {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  .content-section {
+    padding: 15px;
+  }
+}
+
+.content-section h2 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.content-section ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.content-section ul li {
+  margin: 5px 0;
+}
+
+/* Adjust image size for smaller devices */
+@media (max-width: 1024px) { /* Tablets and smaller screens */
+  .section-image {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) { /* Smaller tablets and large phones */
+  .section-image {
+    width: 30%;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile devices */
+  .section-image {
+    width: 20%; /* Full width of content on mobile */
+  }
+}
+
+/* Footer Styling */
+footer {
+  width: 100%;
+  padding: 15px; /* Base padding */
+  background-color: #0D47A1;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  height: 30px; /* Base logo size */
+  margin-right: 8px;
+}
+
+.footer-logo-text {
+  font-size: 16px; /* Base font size */
+  font-weight: bold;
+}
+
+.footer-navigation {
+  margin: 8px 0;
+}
+
+.footer-navigation a {
+  color: #BBDEFB;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 14px; /* Base font size */
+}
+
+.footer-navigation a:hover {
+  color: #fff;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 20px; /* Base icon size */
+  height: 20px;
+  margin: 0 8px;
+}
+
+.social-icon:hover {
+  filter: invert(0.8);
+}
+
+/* Smaller Footer for Laptops and Tablets */
+@media (max-width: 1024px) {
+  footer {
+    padding: 12px; /* Slightly reduced padding */
+  }
+  .footer-logo {
+    height: 28px; /* Smaller logo */
+  }
+  .footer-logo-text {
+    font-size: 15px; /* Smaller font size */
+  }
+  .footer-navigation a {
+    font-size: 13px; /* Smaller link font size */
+  }
+  .social-icon {
+    width: 18px; /* Smaller icon */
+    height: 18px;
+  }
+}
+
+/* Even Smaller Footer for Tablets and Larger Phones */
+@media (max-width: 768px) {
+  footer {
+    padding: 10px; /* Further reduced padding */
+  }
+  .footer-logo {
+    height: 24px; /* Smaller logo */
+  }
+  .footer-logo-text {
+    font-size: 14px; /* Smaller font size */
+  }
+  .footer-navigation a {
+    font-size: 12px; /* Smaller link font size */
+    margin: 0 6px;
+  }
+  .social-icon {
+    width: 16px; /* Smaller icon */
+    height: 16px;
+  }
+}
+
+/* Smallest Footer for Mobile Phones */
+@media (max-width: 480px) {
+  footer {
+    padding: 8px; /* Minimal padding */
+  }
+  .footer-logo {
+    height: 20px; /* Smallest logo */
+  }
+  .footer-logo-text {
+    font-size: 12px; /* Smallest font size */
+  }
+  .footer-navigation a {
+    font-size: 11px; /* Smallest link font size */
+    margin: 0 4px;
+  }
+  .social-icon {
+    width: 14px; /* Smallest icon */
+    height: 14px;
+  }
+}
