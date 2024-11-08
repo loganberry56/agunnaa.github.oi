@@ -364,12 +364,12 @@ footer {
 /* Responsive font size adjustments */
 @media (max-width: 768px) { /* Tablets */
   .fullscreen-message {
-    font-size: 22px;
+    font-size: 40px;
   }
 }
 
 @media (max-width: 480px) { /* Mobile devices */
   .fullscreen-message {
-    font-size: 20px;
+    font-size: 50px;
   }
 }
