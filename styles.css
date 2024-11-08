@@ -390,8 +390,8 @@ footer {
 
 /* Circular Container for the Blinking Text */
 .circle {
-  width: 200px; /* Width of the circle */
-  height: 200px; /* Height of the circle */
+  width: 600px; /* Width of the circle */
+  height: 600px; /* Height of the circle */
   border-radius: 50%; /* Makes the container a perfect circle */
   display: flex;
   align-items: center;
@@ -421,8 +421,8 @@ footer {
 /* Responsive font size adjustments */
 @media (max-width: 768px) { /* Tablets */
   .circle {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
   }
   .blinking-text {
     font-size: 30px;
@@ -431,8 +431,8 @@ footer {
 
 @media (max-width: 480px) { /* Mobile devices */
   .circle {
-    width: 120px;
-    height: 120px;
+    width: 240px;
+    height: 240px;
   }
   .blinking-text {
     font-size: 40px;
