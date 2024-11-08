@@ -333,3 +333,16 @@ footer {
   opacity: 0;
   pointer-events: none; /* Prevent interaction when hidden */
 }
+
+/* Color Animation for PNG/JPG Logo */
+#logo-container img {
+  animation: logoColorShift 10s infinite ease-in-out;
+}
+
+@keyframes logoColorShift {
+  0%, 100% { filter: hue-rotate(0deg); }
+  20% { filter: hue-rotate(60deg); }
+  40% { filter: hue-rotate(120deg); }
+  60% { filter: hue-rotate(180deg); }
+  80% { filter: hue-rotate(240deg); }
+}
