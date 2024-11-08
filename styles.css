@@ -407,12 +407,12 @@ footer {
 /* Responsive font size adjustments */
 @media (max-width: 768px) { /* Tablets */
   .blinking-text {
-    font-size: 22px;
+    font-size: 40px;
   }
 }
 
 @media (max-width: 480px) { /* Mobile devices */
   .blinking-text {
-    font-size: 20px;
+    font-size: 50px;
   }
 }
