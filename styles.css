@@ -431,8 +431,8 @@ footer {
 
 @media (max-width: 480px) { /* Mobile devices */
   .circle {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
   }
   .blinking-text {
     font-size: 40px;
