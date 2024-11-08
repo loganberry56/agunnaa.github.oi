@@ -353,7 +353,7 @@ footer {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #6A0572, #3F51B5); /* Background gradient */
-  color: #333; /* White text color for contrast */
+  color: #fff; /* White text color for contrast */
   font-size: 24px; /* Font size for the message */
   font-weight: bold;
   text-align: center;
