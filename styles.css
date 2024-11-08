@@ -390,7 +390,7 @@ footer {
 
 /* Blinking Text Animation */
 .blinking-text {
-  font-size: 30px; /* Font size for the message */
+  font-size: 20px; /* Font size for the message */
   font-weight: bold;
   animation: colorBlink 0.5s infinite; /* Blinking color animation */
 }
@@ -413,6 +413,6 @@ footer {
 
 @media (max-width: 480px) { /* Mobile devices */
   .blinking-text {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
