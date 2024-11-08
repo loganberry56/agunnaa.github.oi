@@ -148,6 +148,26 @@ header {
   font-size: 25px;
 }
 
+/* Default font size for desktop and larger screens */
+.content-section ul li {
+  font-size: 18px; /* Base font size for larger screens */
+  line-height: 1.6;
+}
+
+/* Increase font size for tablets */
+@media (max-width: 1024px) {
+  .content-section ul li {
+    font-size: 20px; /* Slightly larger font size for tablets */
+  }
+}
+
+/* Increase font size for mobile phones */
+@media (max-width: 768px) {
+  .content-section ul li {
+    font-size: 22px; /* Larger font size for mobile devices */
+  }
+}
+
 /* Footer Styling */
 footer {
   width: 100%;
