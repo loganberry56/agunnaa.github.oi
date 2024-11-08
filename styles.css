@@ -384,14 +384,28 @@ footer {
   background: linear-gradient(135deg, #673AB7, #29B6F6); /* Background gradient */
   color: #fff; /* Default text color */
   text-align: center;
-  padding: 20px; /* Padding for spacing on small screens */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Circular Container for the Blinking Text */
+.circle {
+  width: 200px; /* Width of the circle */
+  height: 200px; /* Height of the circle */
+  border-radius: 50%; /* Makes the container a perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  padding: 20px;
   box-sizing: border-box;
 }
 
 /* Blinking Text Animation */
 .blinking-text {
-  font-size: 20px; /* Font size for the message */
+  font-size: 18px; /* Font size for the message */
   font-weight: bold;
+  text-align: center;
   animation: colorBlink 0.5s infinite; /* Blinking color animation */
 }
 
@@ -406,13 +420,21 @@ footer {
 
 /* Responsive font size adjustments */
 @media (max-width: 768px) { /* Tablets */
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
   .blinking-text {
-    font-size: 30px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) { /* Mobile devices */
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
   .blinking-text {
-    font-size: 40px;
+    font-size: 14px;
   }
 }
