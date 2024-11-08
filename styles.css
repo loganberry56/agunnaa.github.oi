@@ -390,7 +390,7 @@ footer {
 
 /* Blinking Text Animation */
 .blinking-text {
-  font-size: 24px; /* Font size for the message */
+  font-size: 30px; /* Font size for the message */
   font-weight: bold;
   animation: colorBlink 0.5s infinite; /* Blinking color animation */
 }
@@ -407,12 +407,12 @@ footer {
 /* Responsive font size adjustments */
 @media (max-width: 768px) { /* Tablets */
   .blinking-text {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
 @media (max-width: 480px) { /* Mobile devices */
   .blinking-text {
-    font-size: 50px;
+    font-size: 60px;
   }
 }
