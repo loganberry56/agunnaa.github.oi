@@ -202,7 +202,7 @@ header {
 
 /* Circular Container for Blinking Text */
 .circle {
-  width: 360px;
+  width: 370px;
   height: 370px;
   background-color: rgba(255, 255, 255, 0.1); /* Light background inside circle */
   border-radius: 50%; /* Creates the circle shape */
@@ -213,7 +213,7 @@ header {
 
 /* Blinking Text Styling */
 .blinking-text {
-  font-size: 29px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   animation: blinkColors 2s infinite; /* Blinking color animation */
@@ -233,23 +233,24 @@ header {
 /* Responsive font adjustments for smaller screens */
 @media (max-width: 768px) {
   .blinking-text {
-    font-size: 32px;
+    font-size: 20px;
   }
   .circle {
-    width: 290px;
+    width: 300px;
     height: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .blinking-text {
-    font-size: 37px;
+    font-size: 16px;
   }
   .circle {
-    width: 300px;
-    height: 310px;
+    width: 400px;
+    height: 400px;
   }
 }
+
 
 /* Swap Button Styling */
 #swap-button {
@@ -407,4 +408,98 @@ footer {
     width: 14px;
     height: 14px;
   }
+}
+
+/* Swap Container */
+.swap-container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.connect-wallet-btn {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.connect-wallet-btn:hover {
+  background-color: #357ab8;
+}
+
+.swap-box {
+  margin-top: 20px;
+}
+
+.token-select {
+  margin-bottom: 20px;
+}
+
+.token-select label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+input[type="number"] {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+span {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.swap-icon {
+  font-size: 24px;
+  color: #888;
+  margin: 10px 0;
+}
+
+.slippage-tolerance, .transaction-deadline, .transaction-info {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.swap-button {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.swap-button:hover {
+  background-color: #357ab8;
 }
