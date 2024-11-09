@@ -160,29 +160,31 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(13, 71, 161, 0.8); /* Background color */
+  background-color: rgba(13, 71, 161, 0.9); /* Background color */
   color: #fff; /* Text color */
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
 }
 
+/* Styling for Centered Message Text */
 .centered-message {
-  font-size: 24px;
+  font-size: 3vw; /* Responsive font size */
   font-weight: bold;
+  line-height: 1.2; /* Slightly closer line spacing for readability */
   max-width: 80%; /* Limits width for readability on large screens */
 }
 
-/* Responsive font adjustments for smaller screens */
+/* Adjust font size on smaller screens */
 @media (max-width: 768px) {
   .centered-message {
-    font-size: 20px;
+    font-size: 6vw; /* Adjust font size for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .centered-message {
-    font-size: 18px;
+    font-size: 8vw; /* Adjust font size for mobile devices */
   }
 }
 
