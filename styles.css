@@ -153,38 +153,36 @@ header {
   color: #fff;
 }
 
-/* Full-Screen Message Section */
+* Full-Screen Message Section */
 #fullscreen-message {
   width: 100%;
   height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(13, 71, 161, 0.9); /* Background color */
+  background-color: rgba(13, 71, 161, 0.8); /* Background color */
   color: #fff; /* Text color */
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* Styling for Centered Message Text */
 .centered-message {
-  font-size: 3vw; /* Responsive font size */
+  font-size: 24px;
   font-weight: bold;
-  line-height: 1.2; /* Slightly closer line spacing for readability */
   max-width: 80%; /* Limits width for readability on large screens */
 }
 
-/* Adjust font size on smaller screens */
+/* Responsive font adjustments for smaller screens */
 @media (max-width: 768px) {
   .centered-message {
-    font-size: 6vw; /* Adjust font size for tablets */
+    font-size: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .centered-message {
-    font-size: 8vw; /* Adjust font size for mobile devices */
+    font-size: 50px;
   }
 }
 
