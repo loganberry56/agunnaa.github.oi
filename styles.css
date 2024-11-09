@@ -153,13 +153,13 @@ header {
   color: #fff;
 }
 
-* Full-Screen Message Section */
+/* Full-Screen Message Section */
 #fullscreen-message {
   width: 100%;
   height: 100vh; /* Full viewport height */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   background-color: rgba(13, 71, 161, 0.8); /* Background color */
   color: #fff; /* Text color */
   text-align: center;
@@ -171,6 +171,7 @@ header {
   font-size: 24px;
   font-weight: bold;
   max-width: 80%; /* Limits width for readability on large screens */
+  line-height: 1.4; /* Adjust line height to keep text well-balanced */
 }
 
 /* Responsive font adjustments for smaller screens */
@@ -185,6 +186,7 @@ header {
     font-size: 50px;
   }
 }
+
 
 /* Swap Button Styling */
 #swap-button {
