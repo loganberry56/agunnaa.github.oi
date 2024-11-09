@@ -187,6 +187,70 @@ header {
   }
 }
 
+/* Half-Lengthy Message Section */
+#half-lengthy-message {
+  width: 100%;
+  height: 50vh; /* Half the viewport height */
+  background-color: rgba(13, 71, 161, 0.8); /* Background color */
+  display: flex;
+  align-items: center; /* Center the circle vertically */
+  justify-content: center; /* Center the circle horizontally */
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Circular Container for Blinking Text */
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light background inside circle */
+  border-radius: 50%; /* Creates the circle shape */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
+
+/* Blinking Text Styling */
+.blinking-text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  animation: blinkColors 2s infinite; /* Blinking color animation */
+  max-width: 80%; /* Limits width for readability */
+}
+
+/* Blinking Colors Animation */
+@keyframes blinkColors {
+  0% { color: purple; }
+  20% { color: blue; }
+  40% { color: wine red; }
+  60% { color: black; }
+  80% { color: white; }
+  100% { color: purple; }
+}
+
+/* Responsive font adjustments for smaller screens */
+@media (max-width: 768px) {
+  .blinking-text {
+    font-size: 20px;
+  }
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blinking-text {
+    font-size: 16px;
+  }
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 
 /* Swap Button Styling */
 #swap-button {
