@@ -37,10 +37,10 @@
     <button id="swap-button">Swap</button>
     <p class="intro-text">YOUR DECENTRALIZED EXCHANGE ON TON BLOCKCHAIN THAT PROVIDES seamless trading at the speed of time and trade profitably</p>
 
-      <!-- Full-Screen Message Section -->
-  <section id="fullscreen-message">
-    <p class="centered-message">ENJOY YOUR TRADING AND SWAP SWIFTLY IN TIMESWAP FINANCE</p>
-  </section>
+    <!-- Full-Screen Message Section -->
+    <section id="fullscreen-message">
+      <p class="centered-message">ENJOY YOUR TRADING AND SWAP SWIFTLY IN TIMESWAP FINANCE</p>
+    </section>
 
     <!-- About Timeswap Finance Section -->
     <section class="content-section fade-in" id="about">
@@ -92,39 +92,104 @@
   </div>
 
   <!-- Half-Screen Lengthy Message Section with Circular Blinking Text -->
-<section id="half-lengthy-message">
-  <div class="circle">
-    <p class="blinking-text">EXPLORE, ENGAGE AND EXCEL IN TIMESWAP FINANCE</p>
-  </div>
-</section>
+  <section id="half-lengthy-message">
+    <div class="circle">
+      <p class="blinking-text">EXPLORE, ENGAGE AND EXCEL IN TIMESWAP FINANCE</p>
+    </div>
+  </section>
 
-    <!-- Footer with Logo, Navigation Buttons, and Social Media Icons -->
-    <footer id="footer">
-      <div class="footer-logo-container">
-        <img src="images/9.png" alt="Timeswap Footer Logo" class="footer-logo">
-        <span class="footer-logo-text">Timeswap Finance</span>
+  <!-- Footer with Logo, Navigation Buttons, and Social Media Icons -->
+  <footer id="footer">
+    <div class="footer-logo-container">
+      <img src="images/9.png" alt="Timeswap Footer Logo" class="footer-logo">
+      <span class="footer-logo-text">Timeswap Finance</span>
+    </div>
+    <div class="footer-navigation">
+      <a href="#about">About Timeswap Finance</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#features">Unique Features</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/youraccount" target="_blank">
+        <img src="images/6.png" alt="Twitter icon" class="social-icon">
+      </a>
+      <a href="https://telegram.me/youraccount" target="_blank">
+        <img src="images/7.png" alt="Telegram icon" class="social-icon">
+      </a>
+      <a href="https://discord.com/invite/youraccount" target="_blank">
+        <img src="images/8.png" alt="Discord icon" class="social-icon">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Swap Section with Swap Interface -->
+  <div id="swap" class="page hidden">
+    <h2>Swap Tokens</h2>
+
+    <!-- Wallet Connection Button -->
+    <button class="connect-wallet-btn">Connect Wallet</button>
+
+    <!-- Swap Interface -->
+    <div class="swap-container">
+      <div class="swap-box">
+        
+        <!-- From Token Selection and Input -->
+        <div class="token-select">
+          <label for="from-token">From</label>
+          <div class="input-box">
+            <input type="number" id="from-amount" placeholder="0.0" />
+            <select id="from-token">
+              <option value="TON">TON</option>
+              <option value="USDT">USDT</option>
+              <!-- Add more tokens as needed -->
+            </select>
+            <span id="from-balance">Balance: 0</span>
+          </div>
+        </div>
+
+        <!-- Swap Arrow Icon -->
+        <div class="swap-icon">&#8595;</div>
+
+        <!-- To Token Selection and Input -->
+        <div class="token-select">
+          <label for="to-token">To</label>
+          <div class="input-box">
+            <input type="number" id="to-amount" placeholder="0.0" disabled />
+            <select id="to-token">
+              <option value="USDT">USDT</option>
+              <option value="TON">TON</option>
+              <!-- Add more tokens as needed -->
+            </select>
+            <span id="to-balance">Balance: 0</span>
+          </div>
+        </div>
+
+        <!-- Slippage Tolerance -->
+        <div class="slippage-tolerance">
+          <label for="slippage">Slippage Tolerance (%)</label>
+          <input type="number" id="slippage" placeholder="0.5" min="0.1" step="0.1" />
+        </div>
+
+        <!-- Transaction Deadline -->
+        <div class="transaction-deadline">
+          <label for="deadline">Transaction Deadline (minutes)</label>
+          <input type="number" id="deadline" placeholder="5" min="1" step="1" />
+        </div>
+
+        <!-- Price Impact and Estimated Received -->
+        <div class="transaction-info">
+          <p>Price Impact: <span id="price-impact">-</span></p>
+          <p>Estimated Received: <span id="estimated-received">0</span> <span id="to-token-symbol"></span></p>
+        </div>
+
+        <!-- Swap Button -->
+        <button class="swap-button" onclick="performSwap()">Swap</button>
       </div>
-      <div class="footer-navigation">
-        <a href="#about">About Timeswap Finance</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#benefits">Benefits</a>
-        <a href="#features">Unique Features</a>
-      </div>
-      <div class="footer-social">
-        <a href="https://twitter.com/youraccount" target="_blank">
-          <img src="images/6.png" alt="Twitter icon" class="social-icon">
-        </a>
-        <a href="https://telegram.me/youraccount" target="_blank">
-          <img src="images/7.png" alt="Telegram icon" class="social-icon">
-        </a>
-        <a href="https://discord.com/invite/youraccount" target="_blank">
-          <img src="images/8.png" alt="Discord icon" class="social-icon">
-        </a>
-      </div>
-    </footer>
-  
-  <!-- Other Sections -->
-  <div id="swap" class="page hidden"><h2>Swap</h2></div>
+    </div>
+  </div>
+
+  <!-- Stake, Pools, and Portfolio Sections -->
   <div id="stake" class="page hidden"><h2>Stake</h2></div>
   <div id="pools" class="page hidden"><h2>Pools</h2></div>
   <div id="portfolio" class="page hidden"><h2>Portfolio</h2></div>
