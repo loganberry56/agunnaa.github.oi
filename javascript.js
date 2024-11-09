@@ -29,6 +29,14 @@ function navigateTo(pageId) {
   } else {
     footer.style.display = 'none'; // Hide footer on other pages
   }
+
+  // Hide the half-lengthy message on other pages
+  const halfLengthyMessage = document.getElementById('half-lengthy-message');
+  if (pageId === 'landing-page') {
+    halfLengthyMessage.style.display = 'flex'; // Show on landing page
+  } else {
+    halfLengthyMessage.style.display = 'none'; // Hide on other pages
+  }
 }
 
 // Function to check if the footer is in view and toggle Swap button visibility
