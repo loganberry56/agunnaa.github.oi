@@ -15,6 +15,7 @@ body, html {
   50% { background-position: 100% 50%; }
 }
 
+/* Page Layout */
 .page {
   width: 100%;
   min-height: 100vh;
@@ -22,12 +23,12 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  position: relative;
   padding: 20px;
   box-sizing: border-box;
+  position: relative;
 }
 
-/* Header Layout with Logo on Left and Menu Button on Right */
+/* Header Layout */
 header {
   position: fixed;
   top: 10px;
@@ -48,6 +49,7 @@ header {
 #logo {
   height: 40px;
   margin-right: 10px;
+  animation: logoColorShift 10s infinite ease-in-out;
 }
 
 #menu-button {
@@ -58,10 +60,19 @@ header {
   cursor: pointer;
 }
 
+/* Color Animation for PNG/JPG Logo */
+@keyframes logoColorShift {
+  0%, 100% { filter: hue-rotate(0deg); }
+  20% { filter: hue-rotate(60deg); }
+  40% { filter: hue-rotate(120deg); }
+  60% { filter: hue-rotate(180deg); }
+  80% { filter: hue-rotate(240deg); }
+}
+
 /* Sliding Menu Styling */
 #nav-menu {
   position: fixed;
-  top: 50px;/* Directly below the menu button */
+  top: 50px;
   right: 10px;
   width: 200px;
   max-height: 0;
@@ -69,11 +80,11 @@ header {
   background: rgba(0, 0, 0, 0.85);
   border-radius: 8px;
   transition: max-height 0.3s ease;
-  z-index: 2;/* Ensures it appears below the menu button */
+  z-index: 2;
 }
 
 #nav-menu.menu-slide {
-  max-height: 300px; /* Set high enough to reveal all links */
+  max-height: 300px;
 }
 
 #nav-menu nav ul {
@@ -94,42 +105,27 @@ header {
   display: block;
 }
 
-/* Hidden Class to Hide Pages */
+/* Page Content */
 .page.hidden {
   display: none;
 }
 
-/* Content Sections in Landing Page */
+/* Content Sections */
 .content-section {
   width: 100%;
   max-width: 700px;
   margin: 100px 0;
   padding: 10px;
-  background: linear-gradient(135deg, #333, #29B6F6); /* Blue to Black gradient */
-  background-color: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, #333, #29B6F6);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
   transition: opacity 1s ease;
   min-height: 300px;
 }
 
 .content-section.fade-in {
-  opacity: 1; /* Fade in when in view */
-}
-
-/* Mobile Optimization */
-@media (max-width: 600px) {
-  #logo-text {
-    font-size: 18px;
-  }
-  #menu-button {
-    padding: 8px 15px;
-    font-size: 16px;
-  }
-  .content-section {
-    padding: 15px;
-  }
+  opacity: 1;
 }
 
 .content-section h2 {
@@ -148,18 +144,81 @@ header {
   font-size: 25px;
 }
 
+/* Intro Text on Landing Page */
+.intro-text {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px 0 20px;
+  color: #fff;
+}
+
+/* Full-Screen Message Section */
+#fullscreen-message {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(13, 71, 161, 0.8); /* Background color */
+  color: #fff; /* Text color */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.centered-message {
+  font-size: 24px;
+  font-weight: bold;
+  max-width: 80%; /* Limits width for readability on large screens */
+}
+
+/* Responsive font adjustments for smaller screens */
+@media (max-width: 768px) {
+  .centered-message {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .centered-message {
+    font-size: 18px;
+  }
+}
+
+/* Swap Button Styling */
+#swap-button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0D47A1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+
+#swap-button.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Footer Styling */
 footer {
   width: 100%;
-  padding: 15px; /* Base padding */
+  padding: 15px;
   background-color: #0D47A1;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  position: relative;
 }
 
 .footer-logo-container {
@@ -169,12 +228,12 @@ footer {
 }
 
 .footer-logo {
-  height: 30px; /* Base logo size */
+  height: 30px;
   margin-right: 8px;
 }
 
 .footer-logo-text {
-  font-size: 16px; /* Base font size */
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -186,7 +245,7 @@ footer {
   color: #BBDEFB;
   text-decoration: none;
   margin: 0 8px;
-  font-size: 14px; /* Base font size */
+  font-size: 14px;
 }
 
 .footer-navigation a:hover {
@@ -198,129 +257,89 @@ footer {
 }
 
 .social-icon {
-  width: 40px; /* Base icon size */
+  width: 40px;
   height: 40px;
   margin: 0 8px;
 }
 
-/* Smaller Footer for Laptops and Tablets */
+/* Media Queries for Responsive Adjustments */
 @media (max-width: 1024px) {
   footer {
-    padding: 12px; /* Slightly reduced padding */
+    padding: 12px;
   }
   .footer-logo {
-    height: 28px; /* Smaller logo */
+    height: 28px;
   }
   .footer-logo-text {
-    font-size: 15px; /* Smaller font size */
+    font-size: 15px;
   }
   .footer-navigation a {
-    font-size: 13px; /* Smaller link font size */
+    font-size: 13px;
   }
   .social-icon {
-    width: 18px; /* Smaller icon */
+    width: 18px;
     height: 18px;
   }
 }
 
-/* Even Smaller Footer for Tablets and Larger Phones */
 @media (max-width: 768px) {
+  #logo-text {
+    font-size: 18px;
+  }
+  #menu-button {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  .content-section {
+    padding: 15px;
+  }
+  .intro-text {
+    font-size: 20px;
+  }
   footer {
-    padding: 10px; /* Further reduced padding */
+    padding: 10px;
   }
   .footer-logo {
-    height: 24px; /* Smaller logo */
+    height: 24px;
   }
   .footer-logo-text {
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
   }
   .footer-navigation a {
-    font-size: 12px; /* Smaller link font size */
+    font-size: 12px;
     margin: 0 6px;
   }
   .social-icon {
-    width: 16px; /* Smaller icon */
+    width: 16px;
     height: 16px;
   }
 }
 
-/* Smallest Footer for Mobile Phones */
+@media (max-width: 600px) {
+  .footer-logo {
+    height: 24px;
+  }
+}
+
 @media (max-width: 480px) {
+  .intro-text {
+    font-size: 18px;
+  }
   footer {
-    padding: 8px; /* Minimal padding */
+    padding: 8px;
   }
   .footer-logo {
-    height: 20px; /* Smallest logo */
+    height: 20px;
   }
   .footer-logo-text {
-    font-size: 12px; /* Smallest font size */
+    font-size: 12px;
   }
   .footer-navigation a {
-    font-size: 11px; /* Smallest link font size */
+    font-size: 11px;
     margin: 0 4px;
   }
   .social-icon {
-    width: 14px; /* Smallest icon */
+    width: 14px;
     height: 14px;
   }
-}
-
-/* Styling for Intro Text on Landing Page */
-.intro-text {
-  font-size: 24px; /* Increase this size as needed */
-  font-weight: 500; /* Optional: make text slightly bold */
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: #fff; /* Adjust color as needed */
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  .intro-text {
-    font-size: 20px; /* Smaller size for tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .intro-text {
-    font-size: 18px; /* Smaller size for mobile devices */
-  }
-}
-
-/* Styling for the Swap Button */
-#swap-button {
-  position: fixed;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%);
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #0D47A1;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 5; /* Ensure it appears above other content */
-  transition: opacity 0.3s ease;
-}
-
-/* Hidden state for when the button should disappear */
-#swap-button.hidden {
-  opacity: 0;
-  pointer-events: none; /* Prevent interaction when hidden */
-}
-
-/* Color Animation for PNG/JPG Logo */
-#logo-container img {
-  animation: logoColorShift 10s infinite ease-in-out;
-}
-
-@keyframes logoColorShift {
-  0%, 100% { filter: hue-rotate(0deg); }
-  20% { filter: hue-rotate(60deg); }
-  40% { filter: hue-rotate(120deg); }
-  60% { filter: hue-rotate(180deg); }
-  80% { filter: hue-rotate(240deg); }
 }
