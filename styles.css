@@ -202,8 +202,8 @@ header {
 
 /* Circular Container for Blinking Text */
 .circle {
-  width: 200px;
-  height: 200px;
+  width: 370px;
+  height: 370px;
   background-color: rgba(255, 255, 255, 0.1); /* Light background inside circle */
   border-radius: 50%; /* Creates the circle shape */
   display: flex;
@@ -213,7 +213,7 @@ header {
 
 /* Blinking Text Styling */
 .blinking-text {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   animation: blinkColors 2s infinite; /* Blinking color animation */
@@ -236,8 +236,8 @@ header {
     font-size: 20px;
   }
   .circle {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -246,8 +246,8 @@ header {
     font-size: 16px;
   }
   .circle {
-    width: 120px;
-    height: 120px;
+    width: 400px;
+    height: 400px;
   }
 }
 
