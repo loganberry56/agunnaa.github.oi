@@ -202,8 +202,8 @@ header {
 
 /* Circular Container for Blinking Text */
 .circle {
-  width: 350px;
-  height: 350px;
+  width: 360px;
+  height: 360px;
   background-color: rgba(255, 255, 255, 0.1); /* Light background inside circle */
   border-radius: 50%; /* Creates the circle shape */
   display: flex;
@@ -213,7 +213,7 @@ header {
 
 /* Blinking Text Styling */
 .blinking-text {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
   animation: blinkColors 2s infinite; /* Blinking color animation */
@@ -233,17 +233,7 @@ header {
 /* Responsive font adjustments for smaller screens */
 @media (max-width: 768px) {
   .blinking-text {
-    font-size: 40px;
-  }
-  .circle {
-    width: 280px;
-    height: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  .blinking-text {
-    font-size: 50px;
+    font-size: 30px;
   }
   .circle {
     width: 290px;
@@ -251,6 +241,15 @@ header {
   }
 }
 
+@media (max-width: 480px) {
+  .blinking-text {
+    font-size: 35px;
+  }
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+}
 
 /* Swap Button Styling */
 #swap-button {
