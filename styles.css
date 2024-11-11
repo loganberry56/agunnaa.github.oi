@@ -202,7 +202,7 @@ header {
 
 /* Circular Container for Blinking Text */
 .circle {
-  width: 370px;
+  width: 360px;
   height: 370px;
   background-color: rgba(255, 255, 255, 0.1); /* Light background inside circle */
   border-radius: 50%; /* Creates the circle shape */
@@ -213,10 +213,10 @@ header {
 
 /* Blinking Text Styling */
 .blinking-text {
-  font-size: 40px;
+  font-size: 29px;
   font-weight: bold;
   text-align: center;
-  animation: blinkColors 2s infinite; /* Blinking color animation */
+  animation: blinkColors 3s infinite; /* Blinking color animation */
   max-width: 80%; /* Limits width for readability */
 }
 
@@ -233,21 +233,21 @@ header {
 /* Responsive font adjustments for smaller screens */
 @media (max-width: 768px) {
   .blinking-text {
-    font-size: 20px;
+    font-size: 32px;
   }
   .circle {
-    width: 300px;
+    width: 290px;
     height: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .blinking-text {
-    font-size: 16px;
+    font-size: 37px;
   }
   .circle {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 310px;
   }
 }
 
@@ -409,23 +409,19 @@ footer {
     height: 14px;
   }
 }
-/* Swap Interface Styling */
+
+/* Swap Container */
 .swap-container {
-  background-color: #000; /* Black background */
-  padding: 20px 0;
-  width: 100%;
-  max-width: 450px;
-  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
   text-align: center;
-  color: #fff; /* White text color */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
-/* Connect Wallet Button */
 .connect-wallet-btn {
-  background-color: #1e88e5; /* Blue background */
+  background-color: #4a90e2;
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -433,73 +429,27 @@ footer {
   cursor: pointer;
   font-size: 14px;
   margin-bottom: 20px;
-  transition: background-color 0.3s;
 }
 
-.connect-wallet-btn:hover {
-  background-color: #1565c0; /* Darker blue on hover */
-}
-
-/* Token Select and Input Columns */
-.token-select {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  width: 100%;
+.swap-box {
+  margin-top: 20px;
 }
 
 .token-select label {
   font-size: 14px;
-  color: #ffffffcc; /* Soft white for labels */
-  text-align: left;
-  width: 100%;
-  margin-bottom: 5px;
+  color: #333;
 }
 
-.token-select select {
-  background-color: #1e88e5; /* Blue background for token dropdown */
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  appearance: none; /* Remove default arrow icon */
-  text-align: center;
-  cursor: pointer;
-}
-
-/* Input Fields Positioned Opposite Token Selection */
-.input-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-input[type="number"] {
-  background-color: #333; /* Dark background for input fields */
-  color: #1e88e5; /* Blue text color */
-  border: 1px solid #1e88e5;
+input[type="number"], select {
+  border: 1px solid #ddd;
   border-radius: 4px;
   padding: 10px;
   font-size: 16px;
   width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.3s;
 }
 
-input[type="number"]:focus {
-  border-color: #64b5f6; /* Lighter blue border on focus */
-  outline: none;
-}
-
-/* Swap Button */
 .swap-button {
-  background-color: #1e88e5; /* Blue button */
+  background-color: #4a90e2;
   color: #fff;
   padding: 15px;
   border: none;
@@ -507,19 +457,15 @@ input[type="number"]:focus {
   font-size: 16px;
   cursor: pointer;
   width: 100%;
-  margin-top: 20px;
-  transition: background-color 0.3s;
 }
 
-.swap-button:hover {
-  background-color: #1565c0; /* Darker blue on hover */
-}
-
-/* Responsive Styling for Swap Interface */
+/* Responsive styling */
 @media (max-width: 768px) {
   .swap-container {
-    padding: 15px 0;
-    max-width: 100%;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   }
   .connect-wallet-btn {
     font-size: 13px;
@@ -537,7 +483,8 @@ input[type="number"]:focus {
 
 @media (max-width: 480px) {
   .swap-container {
-    padding: 12px 0;
+    width: 100%;
+    padding: 13px;
   }
   .connect-wallet-btn {
     font-size: 12px;
@@ -556,4 +503,4 @@ input[type="number"]:focus {
 /* Double the height of the Swap section */
 #swap {
   min-height: 200vh; /* Sets the minimum height to twice the current viewport height */
-}
+}       
