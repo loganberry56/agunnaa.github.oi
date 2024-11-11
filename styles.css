@@ -412,7 +412,7 @@ footer {
 
 /* Swap Container */
 .swap-container {
-  background-color: #fff;
+  background-color: #0D47A1;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -427,25 +427,25 @@ footer {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 .swap-box {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .token-select label {
-  font-size: 14px;
-  color: #333;
+  font-size: 25px;
+  color: #fff;
 }
 
 input[type="number"], select {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 10px;
-  font-size: 16px;
-  width: 100%;
+  font-size: 25px;
+  width: 95%;
 }
 
 .swap-button {
@@ -454,7 +454,7 @@ input[type="number"], select {
   padding: 15px;
   border: none;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 25px;
   cursor: pointer;
   width: 100%;
 }
@@ -462,40 +462,40 @@ input[type="number"], select {
 /* Responsive styling */
 @media (max-width: 768px) {
   .swap-container {
-    width: 100%;
+    width: 80%;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   }
   .connect-wallet-btn {
-    font-size: 13px;
+    font-size: 20px;
     padding: 8px 12px;
   }
   input[type="number"], select {
-    font-size: 14px;
+    font-size: 20px;
     padding: 8px;
   }
   .swap-button {
-    font-size: 14px;
+    font-size: 20px;
     padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .swap-container {
-    width: 100%;
+    width: 80%;
     padding: 13px;
   }
   .connect-wallet-btn {
-    font-size: 12px;
+    font-size: 20px;
     padding: 7px 10px;
   }
   input[type="number"], select {
-    font-size: 13px;
+    font-size: 20px;
     padding: 7px;
   }
   .swap-button {
-    font-size: 13px;
+    font-size: 20px;
     padding: 10px;
   }
 }
@@ -503,4 +503,4 @@ input[type="number"], select {
 /* Double the height of the Swap section */
 #swap {
   min-height: 200vh; /* Sets the minimum height to twice the current viewport height */
-}       
+}      
