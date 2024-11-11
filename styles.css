@@ -499,3 +499,8 @@ input[type="number"], select {
     padding: 10px;
   }
 }
+
+/* Double the height of the Swap section */
+#swap {
+  min-height: 200vh; /* Sets the minimum height to twice the current viewport height */
+}
