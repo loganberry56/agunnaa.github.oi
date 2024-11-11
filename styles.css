@@ -462,32 +462,32 @@ input[type="number"], select {
 /* Responsive styling */
 @media (max-width: 768px) {
   .swap-container {
-    width: 80%;
+    width: 97%;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   }
   .connect-wallet-btn {
-    font-size: 20px;
+    font-size: 25px;
     padding: 8px 12px;
   }
   input[type="number"], select {
-    font-size: 20px;
+    font-size: 25px;
     padding: 8px;
   }
   .swap-button {
-    font-size: 20px;
+    font-size: 25px;
     padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .swap-container {
-    width: 80%;
+    width: 97%;
     padding: 13px;
   }
   .connect-wallet-btn {
-    font-size: 20px;
+    font-size: 25px;
     padding: 7px 10px;
   }
   input[type="number"], select {
@@ -495,7 +495,7 @@ input[type="number"], select {
     padding: 7px;
   }
   .swap-button {
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px;
   }
 }
